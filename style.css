@@ -1,0 +1,427 @@
+:root {
+  /******************** COLORS *******************/
+  --color-666CA3: #666ca3;
+  --color-13183F: #13183f;
+  --color-83869A: #83869a;
+  --color-F74780: #f74780;
+  --color-FFA7C3: #ffa7c3;
+  --color-FFFFFF: #ffffff;
+  --color-background: #f2f2f2;
+  --gradient1: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  --gradient1Hover: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  --gradient2: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+  --gradient2Hover: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+  --coursesBackground: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+  --desktopGradient2: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+
+  /****************** FONT WEIGHTS ***************/
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  /****************** FONT FAMILY ****************/
+  --Jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+/********************* GENERAL *******************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--Jakarta);
+}
+
+.header-container,
+.hero-section,
+.courses-section {
+  padding: 0 1.6rem;
+}
+
+/***************** REUSABLE CLASSES **************/
+
+.dark {
+  color: var(--color-13183F);
+}
+
+.get-started-btn {
+  color: var(--color-FFFFFF);
+  font-weight: var(--fw-700);
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  border-radius: 2.8rem;
+  padding: 1rem 2.4rem;
+  border: none;
+}
+
+.dark-background {
+  background-color: var(--color-13183F);
+}
+
+.pink-gradient {
+  background: var(--gradient1);
+  padding: 1.5rem 3.7rem;
+  line-height: 2.6rem;
+  margin-bottom: 5rem;
+}
+
+.light {
+  color: var(--color-FFFFFF);
+}
+
+.purple-gradient {
+  background: var(--gradient2);
+}
+
+.skilled-logo-link {
+  text-decoration: none;
+}
+
+/******************** HEADER *********************/
+
+.skilled-logo {
+  font-weight: var(--fw-800);
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.6rem;
+  margin-bottom: 3.8rem;
+}
+
+/******************* HERO SECTION ****************/
+.hero-header {
+  font-weight: var(--fw-800);
+  font-size: 4rem;
+  line-height: 5rem;
+  color: var(--color-13183F);
+  margin-bottom: 2.6rem;
+}
+
+.hero-paragraph {
+  font-weight: var(--fw-500);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--color-83869A);
+  margin-bottom: 2.4rem;
+}
+
+.hero-img {
+  max-width: 100%;
+  display: block;
+  transform: scale(1.2);
+  margin-bottom: 1rem;
+}
+
+/***************** COURSES SECTION ***************/
+.check-out {
+  font-weight: var(--fw-800);
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--color-FFFFFF);
+  background: var(--gradient1);
+  border-radius: 1rem;
+  padding: 2.4rem 2.8rem;
+  margin-bottom: 4.5rem;
+}
+
+.courses-section {
+  background: var(--coursesBackground);
+  padding-bottom: 4rem;
+}
+
+.course-container {
+  background-color: var(--color-FFFFFF);
+  padding: 5rem 2.8rem 3.2rem;
+  margin-bottom: 4.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  position: relative;
+}
+
+.course-icon {
+  position: absolute;
+  top: 0%;
+  transform: translateY(-50%);
+}
+
+.course-name {
+  font-weight: var(--fw-800);
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: var(--color-13183F);
+  margin-bottom: 1.6rem;
+}
+
+.course-info {
+  font-weight: var(--fw-500);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--color-83869A);
+  margin-bottom: 2.4rem;
+}
+
+.course-start {
+  font-weight: var(--fw-700);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: var(--color-F74780);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-13183F);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.6rem 1.6rem;
+}
+
+/****************** HOVER STATES *****************/
+.course-start:is(:hover, :focus) {
+  cursor: pointer;
+}
+
+.get-started-btn.dark-background {
+  z-index: 999;
+}
+
+.get-started-btn.dark-background:is(:hover, :focus) {
+  cursor: pointer;
+  background-color: var(--color-666CA3);
+}
+
+.get-started-btn.pink-gradient:is(:hover, :focus) {
+  cursor: pointer;
+  background: var(--gradient1Hover);
+}
+
+.get-started-btn.purple-gradient:is(:hover, :focus) {
+  cursor: pointer;
+  background: var(--gradient2Hover);
+}
+
+/************** TABLET MEDIA QUERY ************/
+
+/* 768 px */
+@media (min-width: 48em) {
+  .header-container,
+  .hero-section,
+  .courses-section {
+    padding: 0 3.9rem;
+  }
+
+  /****************** HEADER ********************/
+  .header-container {
+    padding-top: 2.4rem;
+    margin-bottom: 10rem;
+  }
+
+  /****************** HERO SECTION **************/
+  .hero-text-container {
+    min-width: 39rem;
+  }
+
+  .hero-img {
+    transform: scale(2);
+    margin-left: 120px;
+    margin-top: -80px;
+  }
+
+  .hero-img-container {
+    max-width: 34rem;
+  }
+
+  .hero-section {
+    margin-bottom: 15rem;
+    display: flex;
+    padding-right: 0;
+  }
+
+  /***************** COURSES SECTION *************/
+  .courses-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.6rem 1rem;
+    padding-bottom: 8.6rem;
+  }
+
+  .check-out {
+    padding-top: 5.6rem;
+    height: 100%;
+  }
+
+  .course-container {
+    margin-bottom: 0;
+  }
+
+  footer {
+    padding: 3.6rem 3.9rem;
+  }
+}
+
+/**************** DESKTOP MEDIA QUERY ************/
+
+/******************** 1250 px ********************/
+@media (min-width: 78.125em) {
+  .header-container,
+  .hero-section,
+  .courses-section {
+    padding: 0 16.5rem;
+  }
+
+  /********************* HEADER ******************/
+  .header-container {
+    padding-top: 3.875rem;
+    margin-bottom: 18.5rem;
+  }
+
+  .skilled-logo {
+    font-size: 3.6rem;
+  }
+
+  .get-started-btn {
+    font-size: 1.8rem;
+    padding: 1.4rem 3.2rem;
+  }
+
+  /***************** HERO SECTION ****************/
+  .hero-section {
+    padding-right: 0;
+    margin-bottom: 22rem;
+  }
+
+  .hero-header {
+    font-size: 5.6rem;
+    line-height: 7.1rem;
+    margin-bottom: 2.9rem;
+  }
+
+  .hero-paragraph {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .hero-text-container {
+    max-width: 45.7rem;
+    max-height: 35.9rem;
+  }
+
+  .hero-img {
+    margin-top: -12rem;
+    margin-left: 35rem;
+    transform: scale(3);
+  }
+
+  .pink-gradient {
+    line-height: 2.8rem;
+    padding: 1.7rem 3.2rem;
+    border-radius: 3.1rem;
+  }
+
+  /**************** COURSES SECTION **************/
+  .courses-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem 3rem;
+    padding-bottom: 14rem;
+  }
+
+  .check-out {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    padding: 6.4rem 3.2rem 13.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .course-container {
+    border-radius: 1.5rem;
+    padding: 6.4rem 3.2rem 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course-name {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .course-info,
+  .course-start {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .course-start {
+    margin-top: auto;
+  }
+
+  footer {
+    padding: 3.2rem 16.5rem;
+  }
+
+  .purple-gradient {
+    background: var(--desktopGradient2);
+  }
+}
+
+/********************* 1330 px *******************/
+@media (min-width: 83.125em) {
+  .hero-img {
+    margin-left: 41rem;
+  }
+}
+
+/******************** 1380 px ********************/
+@media (min-width: 86.25em) {
+  .hero-img {
+    margin-left: 48rem;
+  }
+}
+
+/********************* 1440 px *******************/
+@media (min-width: 90em) {
+  .hero-img {
+    margin-left: 54rem;
+    margin-top: -8rem;
+  }
+}
+
+/********************* 1550 px *******************/
+@media (min-width: 96.875em) {
+  .hero-img {
+    margin-left: 63rem;
+  }
+}
+
+/******************** 1650 px ********************/
+@media (min-width: 103.125em) {
+  .hero-img {
+    margin-left: 75rem;
+  }
+}
